@@ -1,0 +1,22 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+
+	"fow_point"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/fow_point"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+
+	}
+	"ai_scout"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"ai/scout"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+
+	}
+}

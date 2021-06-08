@@ -1,0 +1,5 @@
+/game/overlords/panorama/*
+
+*.bin
+panorama_debugger.cfg
+settings.kv

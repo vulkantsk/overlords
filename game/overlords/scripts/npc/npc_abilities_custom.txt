@@ -415,5 +415,217 @@
 				"respawn_duration"		"5"
 			}
 		}
-	}	
+	}
+
+	"pudge_dirty_bomb"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/plague/dirty_bomb"
+		"AbilityTextureName"			""
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityCooldown"				"10"
+		"MaxLevel"						"4"
+		"AbilityCastPoint"				"0.1"
+        "AbilityCastAnimation"			"ACT_DOTA_RUN"
+
+        "AbilityCastPoint"				"0.25"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18 16 14 12"
+		"AbilityManaCost"				"10"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hook_range"			"600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hook_speed"				"1600"
+			}
+		    "03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"1"
+			}
+           "04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"run_stun_dmg"				"150"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hook_dmg"				"300"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"jump_dist"				"550"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"jump_height"				"1600"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_radius"				"100"
+			}
+
+		}
+	}
+
+	 "pudge_dirty_bomb_converge"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/plague/dirty_bomb"
+		"AbilityTextureName"			""
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"375"
+		"AbilityCastPoint"				"0.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.25"
+		"AbilityManaCost"				"0"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+		}
+	}
+    
+    "pudge_plague_spirit"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/plague/plague_spirit"
+		"AbilityTextureName"			""
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"40"
+		"MaxLevel"						"4"
+
+		"AbilityChannelTime"			"1.5"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cloud_range"			"600"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cloud_duration"				"20 25 30 35"
+			}
+		    "03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cloud_dmg"				"10"
+			}
+           "04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cloud_heal_self"				"2"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cloud_heal_team"				"1"
+			}
+
+		}
+	}
+
+	 "pudge_sweaty_meaty_pie"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/plague/sweaty_meaty_pie"
+		"AbilityTextureName"			""
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel"						"4"
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_str"			"0.1 0.125 0.15 0.2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_modelscale"				"0.2"
+			}
+		    "03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"dmg_to_attacker_per_str"				"0.1 0.2 0.3 0.4"
+			}
+		}
+	}
+
+	 "pudge_good_old_meat"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/plague/good_old_meat"
+		"AbilityTextureName"			""
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		
+        "AbilityCastPoint"				"0.4"
+        
+		"AbilityCooldown"				"60"
+		"MaxLevel"						"4"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"			"20 30 40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"agr_radius"				"1000"
+			}
+		    "03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"agr_duration"				"5 6 7"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"str_multiplier"				"2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"agr_bonus_as"				"100"
+			}
+     
+
+		}
+	}
+
+
 }

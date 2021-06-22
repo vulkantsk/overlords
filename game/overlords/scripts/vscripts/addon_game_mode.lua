@@ -1,8 +1,8 @@
 require("libraries")
 require("game_settings")
 --require("game_spawner")
---require("item_drop")
-require("gamemode")
+require("item_drop")
+--require("gamemode")
 
 function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_misc.vsndevts", context)
@@ -15,12 +15,12 @@ function Activate()
 	GameSettings:InitGameSettings()
 
 
-	local GM = GameRules:GetGameModeEntity()
+--[[	local GM = GameRules:GetGameModeEntity()
 	GM:SetCustomGameForceHero("npc_dota_hero_wisp")
 	GameRules:SetHeroSelectionTime(0)
 	GameRules:SetStrategyTime(0)
 	GameRules:SetShowcaseTime(0)
 	GameRules:SetCustomGameSetupAutoLaunchDelay(0)
-
+]]
 	Convars:SetBool("sv_cheats", true)
 end

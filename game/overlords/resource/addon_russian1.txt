@@ -1,0 +1,88 @@
+"lang"
+{
+	"Language"		"russian"
+	"Tokens"
+	{		
+		"addon_game_name"			"Overlords"
+
+//Abilities
+
+		"DOTA_Tooltip_ability_"					"name"
+		"DOTA_Tooltip_ability__Description"		"desc"
+		"DOTA_Tooltip_ability_"	"" 
+		"DOTA_Tooltip_modifier_"					"name"
+		"DOTA_Tooltip_modifier__Description"		"desc"
+
+		"DOTA_Tooltip_ability_item_gg_new"					"ОПАСНА"
+		"DOTA_Tooltip_ability_item_gg_new_Description"		"ОПИСАНИЕ СПОСОБНОСТИ"
+		"DOTA_Tooltip_ability_item_gg_new_bonus_damage"			"УРОН:" 
+
+		"DOTA_Tooltip_ability_creature_troll_aura"					"Troll shaman aura"
+		"DOTA_Tooltip_ability_creature_troll_aura_Description"		"Союзники вкоруг получают значительный бонус к выживаемости !"
+		"DOTA_Tooltip_ability_creature_troll_aura_aura_radius"			"РАДИУС:" 
+		"DOTA_Tooltip_ability_creature_troll_aura_armor_aura"			"БРОНЯ:" 
+		"DOTA_Tooltip_ability_creature_troll_aura_health_regen_aura"	"РЕГЕНЕРАЦИЯ ЗДОРОВЬЯ:" 
+		"DOTA_Tooltip_ability_creature_troll_aura_vampiric_aura"		"%ВАМПИРИЗМ:" 
+		"DOTA_Tooltip_modifier_creature_troll_aura_aura"					"Troll shaman aura"
+		"DOTA_Tooltip_modifier_creature_troll_aura_aura_Description"		"Получает бонус"
+
+				"DOTA_Tooltip_ability_troll_boss_berserkers_rage"					"Berserker's Rage"
+		"DOTA_Tooltip_ability_troll_boss_berserkers_rage_Description"		"Когда эта способность активирована, герой использует свои метательные топоры в ближнем бою. При этом уменьшается базовый интервал атак, повышается скорость передвижения и броня героя. Он может опутать сетью цель атаки, не давая ей передвигаться или применять способности для перемещения.\n\nBerserker's Rage также изменяет свойства способности Whirling Axes."
+		"DOTA_Tooltip_ability_troll_boss_berserkers_rage_bonus_move_speed"	"ДОП. СКОРОСТЬ ПЕРЕДВИЖЕНИЯ:"
+		"DOTA_Tooltip_ability_troll_boss_berserkers_rage_bonus_armor"		"ДОП. БРОНЯ:"		
+		"DOTA_Tooltip_ability_troll_boss_berserkers_rage_base_attack_time"	"ИНТЕРВАЛ АТАК В БЛИЖНЕМ БОЮ:"
+		"DOTA_Tooltip_ability_troll_boss_berserkers_rage_ensnare_chance"		"%ШАНС ОПУТАТЬ:"
+		"DOTA_Tooltip_ability_troll_boss_berserkers_rage_ensnare_duration"		"ДЛИТЕЛЬНОСТЬ ОПУТЫВАНИЯ:"
+
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_ranged"				"Whirling Axes (дальний бой)"
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_ranged_Description"	"Герой бросает пять топоров веером на расстояние в %axe_range%, замедляя врагов и нанося им урон."
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_ranged_axe_damage"	"УРОН:"
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_ranged_axe_slow_duration"		"ДЛИТЕЛЬНОСТЬ ЗАМЕДЛЕНИЯ:"
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_ranged_movement_speed"		"%ЗАМЕДЛЕНИЕ ПЕРЕДВИЖЕНИЯ:"
+
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_melee"				"Whirling Axes (ближний бой)"
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_melee_Description"	"Герой вращает два топора в небольшой области вокруг себя, нанося врагам урон и вынуждая их промахиваться атаками."
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_melee_damage"			"УРОН:"
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_melee_max_range"		"РАДИУС:"
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_melee_blind_duration"	"ДЛИТЕЛЬНОСТЬ ПРОМАХОВ:"
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_melee_blind_pct"		"%ШАНС ПРОМАХА:"
+		"DOTA_Tooltip_ability_troll_boss_whirling_axes_melee_whirl_duration"	"ДЛИТЕЛЬНОСТЬ ВРАЩЕНИЯ:"
+
+		"DOTA_Tooltip_ability_troll_boss_fervor"								"Fervor"
+		"DOTA_Tooltip_ability_troll_boss_fervor_Description"					"Каждый последующий удар по одной и той же цели увеличивает скорость атаки героя. Если сменить цель, скорость станет обычной."
+		"DOTA_Tooltip_ability_troll_boss_fervor_attack_speed"				"СКОРОСТЬ АТАКИ ЗА ЭФФЕКТ:"
+		"DOTA_Tooltip_ability_troll_boss_fervor_max_stacks"					"МАКС. ЧИСЛО ЭФФЕКТОВ:"
+
+		"DOTA_Tooltip_ability_troll_boss_battle_trance"						"Battle Trance"
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_Description"			"Герой входит в боевой транс, вынуждающий его атаковать ближайшее вражеское существо в радиусе %range% (в первую очередь героев). Под действием этой способности героя нельзя убить. Даёт дополнительные вампиризм, скорость атаки и передвижения. Применяет нормальное развеивание."
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_aghanim_description"		"Уменьшает перезарядку и позволяет применять способность на других героев. Длительность на противниках вдвое меньше."
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_trance_duration"		"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_lifesteal"			"%ВАМПИРИЗМ:"
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_movement_speed"		"%ДОП. СКОРОСТЬ ПЕРЕДВИЖЕНИЯ:"
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_attack_speed"			"ДОП. СКОРОСТЬ АТАКИ:"
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_radius"				"РАДИУС:"
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_scepter_cooldown"		"ПЕРЕЗАРЯДКА СО СКИПЕТРОМ:"
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_scepter_duration_enemies"		"ДЛИТЕЛЬНОСТЬ НА ВРАГАХ СО СКИПЕТРОМ:"
+		"DOTA_Tooltip_ability_troll_boss_battle_trance_scepter_cast_range_tooltip"		"ДАЛЬНОСТЬ ПРИМЕНЕНИЯ СО СКИПЕТРОМ:"
+//Units
+		"npc_line_creep_1"			"Троль берсерк"
+		"npc_line_creep_2"			"Троль шаман"
+		"npc_line_creep_3"			"Темный троль"
+		"npc_line_creep_4"			"Тёмный троль шаман"
+
+		"npc_line_boss_1"			"Генерал тролей"
+
+		"npc_neutral_boss_1"			"Сатир душегуб"
+		"npc_neutral_boss_2"			"Сатир покровитель"
+		"npc_neutral_boss_3"			"Ууу сука"
+
+		"npc_neutral_golem_1"			"Каменный голем"
+		"npc_neutral_golem_2"			"Гранитный голем"
+
+		"npc_neutral_kobold_1"			"Кобольд"
+		"npc_neutral_kobold_2"			"Кобольд копьеносец"
+		"npc_neutral_kobold_3"			"Командир кобольдов"
+
+		"npc_goodguys_fort"				"БАЗА"
+	}
+}

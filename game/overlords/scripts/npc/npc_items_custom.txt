@@ -383,4 +383,36 @@
 			}
 		}
 	}
+	"item_gg_new"
+	{
+		"BaseClass"             		"item_datadriven"
+		"AbilityTextureName"			"item_desolator"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"2"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_damage"				"100 500"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_gg_new"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"IsDebuff"			"0"
+		
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+				}
+			}
+		}
+	}
 }

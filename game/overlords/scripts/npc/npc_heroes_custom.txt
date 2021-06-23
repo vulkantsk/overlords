@@ -3,16 +3,222 @@
 // the specified key-value combinations.  Use override_hero <hero_to_override> for this.
 "DOTAHeroes"
 {
+	"npc_dota_hero_antimage"//example
+	{
+		"Model"					"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+//		"DisableWearables"			"1"// Отключить шмотки ?
+		"ModelScale"				"0.6"
+
+		"Ability1"		"jacob_powerup_dmg"
+		"Ability2"		"jacob_powerup_armor"
+		"Ability3"		"jacob_powerup_hp"
+		"Ability4"		"jacob_powerup_as"
+		"Ability5"		"jacob_powerup_ms"
+		"Ability6"		"jacob_infest" //ULT
+		"Ability7"		"generic_hidden"
+		"Ability8"		"generic_hidden"
+
+		"Ability10"		"special_bonus_exp_boost_10"
+		"Ability11"		"special_bonus_gold_income_60"
+		"Ability12"		"special_bonus_exp_boost_15"
+		"Ability13"		"special_bonus_gold_income_120"
+		"Ability14"		"special_bonus_exp_boost_20"
+		"Ability15"		"special_bonus_gold_income_180"
+		"Ability16"		"special_bonus_exp_boost_25"
+		"Ability17"		"special_bonus_gold_income_240"
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"			"1"
+		"AttackDamageMax"			"1"
+		"AttackRate"				"3.0"
+		"AttackAnimationPoint"		"0.55"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"//DOTA_UNIT_CAP_RANGED_ATTACK
+		"AttackRange"				"175"
+		
+		"ProjectileModel"		""		
+		"ProjectileSpeed"			"1550"
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"// DOTA_ATTRIBUTE_STRENGTH или DOTA_ATTRIBUTE_AGILITY или DOTA_ATTRIBUTE_INTELLECT
+		"AttributeBaseStrength"		"10"
+		"AttributeStrengthGain"		"1"
+		"AttributeBaseAgility"		"10"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"10"
+		"AttributeIntelligenceGain"	"1"
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"325"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"				"200"
+		"StatusHealthRegen"			"1"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"1"
+
+
+		"VisionDaytimeRange"		"1600"
+		"VisionNighttimeRange"		"1000"
+	}
+	
+	"npc_dota_hero_undying"
+	{
+		"Model"					"models/items/undying/flesh_golem/grim_harvest_golem/grim_harvest_golem.vmdl"
+//		"DisableWearables"			"1"// Отключить шмотки ?
+		"ModelScale"				"1"
+
+		"Ability1"		"generic_hidden"
+		"Ability2"		"generic_hidden"
+		"Ability3"		"generic_hidden"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"jacob_infest" //ULT
+		"Ability7"		"generic_hidden"
+		"Ability8"		"generic_hidden"
+
+		"Ability10"		"special_bonus_exp_boost_10"
+		"Ability11"		"special_bonus_gold_income_60"
+		"Ability12"		"special_bonus_exp_boost_15"
+		"Ability13"		"special_bonus_gold_income_120"
+		"Ability14"		"special_bonus_exp_boost_20"
+		"Ability15"		"special_bonus_gold_income_180"
+		"Ability16"		"special_bonus_exp_boost_25"
+		"Ability17"		"special_bonus_gold_income_240"
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"			"100"
+		"AttackDamageMax"			"100"
+		"AttackRate"				"3.0"
+		"ProjectileSpeed"			"1550"
+		"AttackAnimationPoint"		"0.55"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"				"175"
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"100"
+		"AttributeStrengthGain"		"1"
+		"AttributeBaseAgility"		"10"
+		"AttributeAgilityGain"		"1"
+		"AttributeBaseIntelligence"	"10"
+		"AttributeIntelligenceGain"	"1"
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"325"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"				"200"
+		"StatusHealthRegen"			"1"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"1"
+
+
+		"VisionDaytimeRange"		"1600"
+		"VisionNighttimeRange"		"1000"
+	}
+	
+	"npc_dota_hero_life_stealer"
+	{
+//		"Model"					"models/items/undying/flesh_golem/grim_harvest_golem/grim_harvest_golem.vmdl"
+//		"DisableWearables"			"1"// Отключить шмотки ?
+		"ModelScale"				"1"
+
+//		"Ability1"		"generic_hidden"
+//		"Ability2"		"generic_hidden"
+//		"Ability3"		"generic_hidden"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+//		"Ability6"		"jacob_infest" //ULT
+		"Ability7"		"generic_hidden"
+		"Ability8"		"generic_hidden"
+
+		"Ability10"		"special_bonus_exp_boost_10"
+		"Ability11"		"special_bonus_gold_income_60"
+		"Ability12"		"special_bonus_exp_boost_15"
+		"Ability13"		"special_bonus_gold_income_120"
+		"Ability14"		"special_bonus_exp_boost_20"
+		"Ability15"		"special_bonus_gold_income_180"
+		"Ability16"		"special_bonus_exp_boost_25"
+		"Ability17"		"special_bonus_gold_income_240"
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackDamageMin"			"10"
+		"AttackDamageMax"			"20"
+		"AttackRate"				"0.5"
+		"ProjectileSpeed"			"1550"
+		"AttackAnimationPoint"		"0.55"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackRange"				"1000"
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"0"
+		"MagicalResistance"			"0"
+
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"10"
+		"AttributeStrengthGain"		"1"
+		"AttributeBaseAgility"		"100"
+		"AttributeAgilityGain"		"10"
+		"AttributeBaseIntelligence"	"10"
+		"AttributeIntelligenceGain"	"1"
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"325"
+		"MovementTurnRate"			"1"
+
+		// Status
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"				"200"
+		"StatusHealthRegen"			"1"
+		"StatusMana"				"100"
+		"StatusManaRegen"			"1"
+
+
+		"VisionDaytimeRange"		"1600"
+		"VisionNighttimeRange"		"1000"
+	}
 	 "npc_dota_hero_pudge"
 	{
-		"override hero"				"npc_dota_hero_pudge"
 		"ModelScale"				"0.5"
+		
 		"Ability1"		"pudge_dirty_bomb"
 		"Ability2"		"pudge_plague_spirit"
 		"Ability3"		"pudge_sweaty_meaty_pie"
-		"Ability4"		"pudge_good_old_meat"
-		"Ability5"		""
-		"Ability6"		""
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"pudge_good_old_meat"
+
 		"Ability10"		"special_bonus_spell_amplify_20"
 		"Ability11"		"special_bonus_mp_regen_10"
 		"Ability12"		"special_bonus_intelligence_25"
@@ -46,7 +252,5 @@
 		"VisionNighttimeRange"		"1000"
 		"VisionDaytimeRange"		"1500"
 	}
-
-
 
 }

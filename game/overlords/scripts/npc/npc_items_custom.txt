@@ -386,7 +386,7 @@
 	"item_gg_new"
 	{
 		"BaseClass"             		"item_datadriven"
-		"AbilityTextureName"			"item_desolator"
+		"AbilityTextureName"			"item_gg_new"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxUpgradeLevel"				"2"
 		"ItemBaseLevel"					"2"

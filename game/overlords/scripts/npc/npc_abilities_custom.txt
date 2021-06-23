@@ -421,7 +421,7 @@
 	{
 		"BaseClass"             		"ability_lua"
 		"ScriptFile"					"heroes/plague/dirty_bomb"
-		"AbilityTextureName"			""
+		"AbilityTextureName"			"pudge/dirty_bomb"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityCooldown"				"10"
 		"MaxLevel"						"4"
@@ -485,7 +485,7 @@
 	{
 		"BaseClass"             		"ability_lua"
 		"ScriptFile"					"heroes/plague/dirty_bomb"
-		"AbilityTextureName"			""
+		"AbilityTextureName"			"pudge/dirty_bomb_converge"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
@@ -515,7 +515,7 @@
 	{
 		"BaseClass"             		"ability_lua"
 		"ScriptFile"					"heroes/plague/plague_spirit"
-		"AbilityTextureName"			""
+		"AbilityTextureName"			"pudge/plague_spirit"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCooldown"				"40"
 		"MaxLevel"						"4"
@@ -557,7 +557,7 @@
 	{
 		"BaseClass"             		"ability_lua"
 		"ScriptFile"					"heroes/plague/sweaty_meaty_pie"
-		"AbilityTextureName"			""
+		"AbilityTextureName"			"pudge/sweaty_meaty_pie"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"MaxLevel"						"4"
 
@@ -586,7 +586,7 @@
 	{
 		"BaseClass"             		"ability_lua"
 		"ScriptFile"					"heroes/plague/good_old_meat"
-		"AbilityTextureName"			""
+		"AbilityTextureName"			"pudge/old_meat"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		

@@ -141,73 +141,6 @@
 		"VisionNighttimeRange"		"1000"
 	}
 	
-	"npc_dota_hero_life_stealer"
-	{
-//		"Model"					"models/items/undying/flesh_golem/grim_harvest_golem/grim_harvest_golem.vmdl"
-//		"DisableWearables"			"1"// Отключить шмотки ?
-		"ModelScale"				"1"
-
-//		"Ability1"		"generic_hidden"
-//		"Ability2"		"generic_hidden"
-//		"Ability3"		"generic_hidden"
-		"Ability4"		"generic_hidden"
-		"Ability5"		"generic_hidden"
-//		"Ability6"		"jacob_infest" //ULT
-		"Ability7"		"generic_hidden"
-		"Ability8"		"generic_hidden"
-
-		"Ability10"		"special_bonus_exp_boost_10"
-		"Ability11"		"special_bonus_gold_income_60"
-		"Ability12"		"special_bonus_exp_boost_15"
-		"Ability13"		"special_bonus_gold_income_120"
-		"Ability14"		"special_bonus_exp_boost_20"
-		"Ability15"		"special_bonus_gold_income_180"
-		"Ability16"		"special_bonus_exp_boost_25"
-		"Ability17"		"special_bonus_gold_income_240"
-
-		// Attack
-		//-------------------------------------------------------------------------------------------------------------
-		"AttackDamageMin"			"10"
-		"AttackDamageMax"			"20"
-		"AttackRate"				"0.5"
-		"ProjectileSpeed"			"1550"
-		"AttackAnimationPoint"		"0.55"
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"				"1000"
-
-		// Armor
-		//-------------------------------------------------------------------------------------------------------------
-		"ArmorPhysical"				"0"
-		"MagicalResistance"			"0"
-
-
-		// Attributes
-		//-------------------------------------------------------------------------------------------------------------
-		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
-		"AttributeBaseStrength"		"10"
-		"AttributeStrengthGain"		"1"
-		"AttributeBaseAgility"		"100"
-		"AttributeAgilityGain"		"10"
-		"AttributeBaseIntelligence"	"10"
-		"AttributeIntelligenceGain"	"1"
-
-		// Movement
-		//-------------------------------------------------------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"
-		"MovementTurnRate"			"1"
-
-		// Status
-		//-------------------------------------------------------------------------------------------------------------
-		"StatusHealth"				"200"
-		"StatusHealthRegen"			"1"
-		"StatusMana"				"100"
-		"StatusManaRegen"			"1"
-
-
-		"VisionDaytimeRange"		"1600"
-		"VisionNighttimeRange"		"1000"
-	}
 	 "npc_dota_hero_pudge"
 	{
 		"ModelScale"				"0.5"
@@ -251,6 +184,77 @@
 
 		"VisionNighttimeRange"		"1000"
 		"VisionDaytimeRange"		"1500"
+	}
+
+	"npc_dota_hero_war"
+	{
+		"override_hero"	"npc_dota_hero_life_stealer"
+		"Model"		"models/heroes/life_stealer/life_stealer.vmdl"
+		"IdleExpression"		"scenes/life_stealer/life_stealer_exp_idle_01.vcd"
+		"SoundSet"		"Hero_LifeStealer"
+		"Enabled"		"1"
+		"HeroUnlockOrder"		"1"
+		"Role"			"Carry,Escape,Disabler"
+		"Rolelevels"	"3,3,2"
+		"Complexity"	"2"
+		"Team"		"Bad"
+		"HeroID"		"54"
+		"HeroOrderID"	"61"
+		"ModelScale"		"0.810000"
+		"VersusScale"		"0.900000"
+		"SpectatorLoadoutScale" "0.87"
+		"HeroGlowColor"		"209 4 1"
+		"CMEnabled"		"1"
+		"PickSound"		"life_stealer_lifest_spawn_01"
+		"BanSound"		"life_stealer_lifest_anger_05"
+		"new_player_enable"		"1"
+		"HeroSelectSoundEffect"		"Hero_LifeStealer.Pick"
+		"GibType"		"default"
+		"Ability1"		""
+		"Ability2"		"war_war_dash"
+		"Ability3"		"war_military_tribunal"
+		"Ability4"		"war_war_is_war"
+		"Ability5"		"" 
+		"Ability6"		"" //6 и 7 абилка должны быть реализованы одной кнопкой - игрок на 20 уровне получает возможность выучить одну из данных способностей
+		"Ability7"		""
+		"Ability10"		"special_bonus_unique_war_1"
+		"Ability11"		"special_bonus_unique_war_2"
+		"Ability12"		"special_bonus_unique_war_3"
+		"Ability13"		"special_bonus_unique_war_4"
+		"Ability14"		"special_bonus_unique_war_5"
+		"Ability15"		"special_bonus_unique_war_6"
+		"Ability16"		"special_bonus_unique_war_7"
+		"Ability17"		"special_bonus_unique_war_8"
+		"ArmorPhysical"		"1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"22"
+		"AttackDamageMax"		"28"
+		"AttackRate"		"1.7000"
+		"BaseAttackSpeed"		"120"
+		"AttackAnimationPoint"		"0.390000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"40"
+		"AttributeStrengthGain"		"1.500000"
+		"AttributeBaseIntelligence"		"10"
+		"AttributeIntelligenceGain"		"1.0000"
+		"AttributeBaseAgility"		"40"
+		"AttributeAgilityGain"		"4.000000"
+		"MovementSpeed"		"320" 
+		"MovementTurnRate"		"0.900000"
+		"HasAggressiveStance"		"1"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_life_stealer.vsndevts"
+		"particle_folder"		"particles/units/heroes/hero_life_stealer"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_life_stealer/life_stealer_loadout.vpcf"		"loadout"
+			}
+		}
 	}
 
 }

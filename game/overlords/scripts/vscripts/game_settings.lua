@@ -625,7 +625,8 @@ function GameSettings:OnEntityKilled( keys )
 	local killedUnit = EntIndexToHScript( keys.entindex_killed )
 	-- The Killing entity
 	local killerEntity = nil
-	local team= killedUnit:GetTeam()
+	local team = killedUnit:GetTeam()
+	local name = killedUnit:GetUnitName()
 	
 	if killedUnit:IsRealHero() and killedUnit:IsReincarnating() == false then
 		killedUnit:SetTimeUntilRespawn( HERO_RESPAWN_TIME )
@@ -636,5 +637,18 @@ function GameSettings:OnEntityKilled( keys )
 		killerEntity = EntIndexToHScript( keys.entindex_attacker )
 	end
 
+	if name == "npc_dota_crystal" then
+      local random = RandomInt(1, 2)
+       
+       if random == 1 then
+       killerEntity:AddExperience(500, 0, true, true)
+       elseif random == 2 then
+       	killerEntity:ModifyGold(350, false, 0)
+       	killerEntity:EmitSound("DOTA_Item.Hand_Of_Midas")
+       --elseif random == 3 then
+      -- 	KilledEntity:
+       end
+	
+	end
 	-- Put code here to handle when an entity gets killed
 end

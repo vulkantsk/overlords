@@ -627,12 +627,116 @@
 		}
 	}
 
+	"war_strip_the_scabbard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"ursa_fury_swipes"
+		
+		// Casting
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_stacks"			"30 30 15 15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"base_lifesteal"		"3 4 5 6"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifesteal"				"1 1 2 2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stacks_for_silence"	"6 6 6 6"
+			}			
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"silence_duration"		"3 3 3 3"
+			}		
+		}
+
+		"Modifiers"
+		{
+			"modifier_war_strip_the_scabbard"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"IsDebuff"			"0"
+
+				"OnAttack"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/abilities/ab_scripts.lua"
+						"Function"		"WarStrip"
+						"modifier"		"modifier_war_strip_the_scabbard_stack"
+					}
+				}
+				
+				"OnDealDamage"
+				{
+					"Lifesteal"
+					{
+						"Target"      		"ATTACKER"
+						"LifestealPercent"  "%base_lifesteal"
+					}
+				}
+			}
+
+			"modifier_war_strip_the_scabbard_stack"
+			{
+				"Passive"		"0"
+				"IsBuff"		"1"
+				"IsPurgable"	"0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE" "%lifesteal" 
+				}
+				"OnDealDamage"
+				{
+					"Lifesteal"
+					{
+						"Target"      		"ATTACKER"
+						"LifestealPercent"  "%lifesteal"
+					}
+				}
+			}
+			
+			"modifier_war_strip_the_scabbard_silence"
+			{
+				"Passive"		"0"
+				"IsPurgable"	"1"
+				"Duration"		"%silence_duration"
+				
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
 	"war_war_dash"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY | DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityTextureName"			"antimage_blink"
 		"MaxLevel"						"4"
 
@@ -675,7 +779,7 @@
 			{
 				"ScriptFile"	"scripts/vscripts/abilities/ab_scripts.lua"
 				"Function"		"WarDash"
-				"Target"		"POINT"
+				"Target"		"TARGET"
 			}
 
 			"FireSound"
@@ -687,7 +791,7 @@
 			"FireSound"
 			{
 				"EffectName"	"Hero_Antimage.Blink_in"
-				"Target"		"CASTER"
+				"Target"		"TARGET"
 			}
 
 			"AttachEffect"
@@ -703,7 +807,7 @@
 			"RunScript"
 			{
 				"ScriptFile"	"scripts/vscripts/abilities/ab_scripts.lua"
-				"Function"		"WarDashDamage	"
+				"Function"		"WarDashDamage"
 			}
 		}
 	}
@@ -750,6 +854,11 @@
 				"var_type"				"FIELD_INTEGER"
 				"crit_bonus"			"250"
 			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stack_duration"		"6"
+			}			
 		}
 
 		"Modifiers"
@@ -848,5 +957,131 @@
 			}				
 		}
 	}
+
+	"war_war_is_war"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 			"invoker_exort"
+		"MaxLevel"						"3"
+		
+		// Casting
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"enemy_dmg_active"		"40 60 80"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"enemy_dmg_passive"		"10 20 30"
+			}	
+		}
+
+		"Modifiers"
+		{
+			"modifier_war_war_is_war"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"IsDebuff"			"0"
+
+				"OnAttack"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/abilities/ab_scripts.lua"
+						"Function"		"WarWarA"
+					}
+				}
+				
+				"OnAttacked"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/abilities/ab_scripts.lua"
+						"Function"		"WarWarP"
+					}
+				}
+			}
+		}
+	}
+	
+	"war_kill_me_if_you_can"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 			"invoker_wex"
+		"MaxLevel"						"1"
+		"RequiredLevel"        			"20"
+		
+		// Casting
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"resist"		"95"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"enemy_dmg"				"300"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1000"
+			}			
+		}
+
+		"Modifiers"
+		{
+			"modifier_war_kill_me_if_you_can"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"				"%resist"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%resist"
+				}
+			}
+			
+			"modifier_war_kill_me_if_you_can_aura_emitter"  
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				
+				"Aura" 					"modifier_war_kill_me_if_you_can_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_NONE"
+				"Aura_ApplyToCaster" 	"0"
+			}
+			
+			"modifier_war_kill_me_if_you_can_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsPurgable"		"0"
+				"IsBuff"			"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"			"%enemy_dmg"
+				}
+			}
+		}
+	}	
 
 }

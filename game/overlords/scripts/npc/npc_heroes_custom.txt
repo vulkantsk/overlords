@@ -210,11 +210,11 @@
 		"new_player_enable"		"1"
 		"HeroSelectSoundEffect"		"Hero_LifeStealer.Pick"
 		"GibType"		"default"
-		"Ability1"		""
+		"Ability1"		"war_strip_the_scabbard"
 		"Ability2"		"war_war_dash"
 		"Ability3"		"war_military_tribunal"
 		"Ability4"		"war_war_is_war"
-		"Ability5"		"" 
+		"Ability5"		"war_kill_me_if_you_can" 
 		"Ability6"		"" //6 и 7 абилка должны быть реализованы одной кнопкой - игрок на 20 уровне получает возможность выучить одну из данных способностей
 		"Ability7"		""
 		"Ability10"		"special_bonus_unique_war_1"

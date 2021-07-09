@@ -1,3 +1,4 @@
+
 FOW_POINT_DISTANCE = 1500
 FOW_POINT_REVEAL_RADIUS = FOW_POINT_DISTANCE * math.sqrt(2)/2+20
 FOW_POINT_REVEAL_TIME = 10
@@ -19,10 +20,13 @@ end
 function GameMode:OnGameRulesStateChange()
 	local newState = GameRules:State_Get()
 	print("newState = "..newState)
-	if newState == DOTA_GAMERULES_STATE_PRE_GAME then
-		self:InitFogOfWarPoints()
-	elseif newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
-
+	--if newState == DOTA_GAMERULES_STATE_PRE_GAME then
+		--self:InitFogOfWarPoints()
+	if newState == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
+		print('waves started')
+    elseif newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then			
+		print('waves started')
+		GameMode:Raid()
 	end
 end
 function GameMode:InitFogOfWarPoints()
@@ -57,6 +61,45 @@ function GameMode:InitFogOfWarPoints()
 		end
 	end
 end
+
+function GameMode:BonusUnitStats(unit, bonus_hp, bonus_dmg, armor)	
+	if not unit:IsAlive() then
+		return
+	end
+		
+	Timers:CreateTimer(0.02, function()				
+		local armor = armor or 200	
+		local new_armor = unit:GetPhysicalArmorBaseValue()*multiplier
+		local max_hp = unit:GetMaxHealth()+bonus_hp
+		local min_dmg = unit:GetBaseDamageMin()+bonus_dmg
+		local max_dmg = unit:GetBaseDamageMax()+bonus_dmg
+
+		if max_hp <= 1 then 
+			 max_hp = 1
+		elseif max_hp >= 2000000000 then
+			 max_hp = 2000000000
+		end
+		unit:SetBaseMaxHealth(max_hp)
+		unit:SetMaxHealth(max_hp)	
+		unit:SetHealth(max_hp)
+
+		if new_armor > armor then
+			new_armor = armor
+		end
+		unit:SetPhysicalArmorBaseValue(new_armor)		
+		if min_dmg >= 2000000000 then
+			 min_dmg = 2000000000
+		end
+		unit:SetBaseDamageMin(min_dmg)
+
+		if max_dmg >= 2000000000 then
+			 max_dmg = 2000000000
+		end				
+		unit:SetBaseDamageMax(max_dmg)
+
+	end)
+end
+
 
 function GameMode:RevealFOWPoint(unit, team)
 	unit.init[team] = true
@@ -101,5 +144,86 @@ function GameMode:OnEntityKilled(keys)
 	local unit_name = unit:GetUnitName()
 	
 end
+
+
+
+
+function GameMode:Raid() -- Функция начнет выполняться, когда начнется матч( на часах будет 00:00 ).
+      local point = Entities:FindByName( nil, "raid_spawn"):GetAbsOrigin() 
+      local wave = 1
+ 	Timers:CreateTimer(0.1, function()  
+      	
+      	local hero = PlayerResource:GetPlayer(0)
+      	local waypoint = hero:GetAbsOrigin() 
+  	   return 1
+  	end)
+      
+      local return_time = 1 -- Записываем в переменную значение '10'
+    Timers:CreateTimer(0.1, function()  
+         Timers:CreateTimer(3, function()
+			for i=1, 4 do -- Произведет нижние действия столько раз, сколько указано в ROUND_UNITS. То есть в нашем случае создаст 2 юнита.
+              local unit = CreateUnitByName( "npc_dota_dragon_knight_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+         end
+          local unit = CreateUnitByName( "npc_dota_legion_commander_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+
+         end)
+          Timers:CreateTimer(6, function()
+			for i=1, 4 do -- Произведет нижние действия столько раз, сколько указано в ROUND_UNITS. То есть в нашем случае создаст 2 юнита.
+              local unit = CreateUnitByName( "npc_dota_dragon_knight_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+         end
+          local unit = CreateUnitByName( "npc_dota_legion_commander_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+
+         end)
+           Timers:CreateTimer(9, function()
+			for i=1, 4 do -- Произведет нижние действия столько раз, сколько указано в ROUND_UNITS. То есть в нашем случае создаст 2 юнита.
+              local unit = CreateUnitByName( "npc_dota_dragon_knight_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+         end
+          local unit = CreateUnitByName( "npc_dota_legion_commander_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+
+         end)
+            Timers:CreateTimer(12, function()
+			for i=1, 4 do -- Произведет нижние действия столько раз, сколько указано в ROUND_UNITS. То есть в нашем случае создаст 2 юнита.
+              local unit = CreateUnitByName( "npc_dota_dragon_knight_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+         end
+          local unit = CreateUnitByName( "npc_dota_legion_commander_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+
+         end)
+             Timers:CreateTimer(15, function()
+			for i=1, 4 do -- Произведет нижние действия столько раз, сколько указано в ROUND_UNITS. То есть в нашем случае создаст 2 юнита.
+              local unit = CreateUnitByName( "npc_dota_dragon_knight_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+         end
+          local unit = CreateUnitByName( "npc_dota_legion_commander_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+
+         end)
+    end)
+              if GameRules:GetDOTATime(false,false)>18 then
+              Timers:CreateTimer(3, function()
+			
+
+			for i=1, 4 do -- Произведет нижние действия столько раз, сколько указано в ROUND_UNITS. То есть в нашем случае создаст 2 юнита.
+              local unit = CreateUnitByName( "npc_dota_dragon_knight_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+         end
+          	GameMode:BonusUnitStats(unit, 5000*wave, 100*wave)
+          	local unit_dk = CreateUnitByName( "npc_dota_legion_commander_raid" , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+         unit:SetInitialGoalEntity( waypoint ) -- Посылаем мобов на наш way1, координаты которого мы записали в переменную 'waypoint'
+             GameMode:BonusUnitStats(unit_dk, 500*wave, 30*wave)
+             wave = wave + 1
+             return return_time
+         end)
+   
+      
+end	
+
 
 GameMode:InitGameMode()

@@ -1005,4 +1005,44 @@
 	}
 }
 
+	"reward_on_death"
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"1"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"reward_gold"					"200"
+			}
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"reward_exp"					"100"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_duel_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"abilities/ab_scripts.lua"
+						"Function"		"RewardOnDeath"
+					}
+				}
+			}
+		}
+	}
+
 }

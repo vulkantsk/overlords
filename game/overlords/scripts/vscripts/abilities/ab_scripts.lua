@@ -118,3 +118,27 @@ function WarWarDealDamage(caster, target, percent)
 	ApplyDamage({ victim = target, attacker = caster, damage = (target:GetAttackDamage() / 100 * percent), damage_type = DAMAGE_TYPE_PHYSICAL})
 end
 --war
+
+--reward on death
+function RewardOnDeath(keys)
+	local deadUnit = keys.caster
+	local rewardGold = keys.ability:GetSpecialValueFor("reward_gold")
+	local rewardExp = keys.ability:GetSpecialValueFor("reward_exp")
+	
+	if string.match(deadUnit:GetUnitName(), "gold") then
+		rewardExp = 0
+	elseif string.match(deadUnit:GetUnitName(), "exp") then
+		rewardGold = 0
+	end
+	
+	for i = 0, PlayerResource:GetPlayerCount() do
+		if PlayerResource:IsValidPlayer(i) then
+			local hero = PlayerResource:GetPlayer(i):GetAssignedHero()
+			if hero then
+				hero:ModifyGold(rewardGold, true, DOTA_ModifyGold_Building)
+				hero:AddExperience(rewardExp, DOTA_ModifyXP_CreepKill, false, true)
+			end
+		end
+	end
+end
+--

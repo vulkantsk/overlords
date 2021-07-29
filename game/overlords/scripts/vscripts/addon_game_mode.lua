@@ -3,6 +3,7 @@ require("game_settings")
 --require("game_spawner")
 require("item_drop")
 --require("gamemode")
+require("zpr/req")
 
 function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_misc.vsndevts", context)

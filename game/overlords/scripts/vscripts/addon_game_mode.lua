@@ -2,7 +2,7 @@ require("libraries")
 require("game_settings")
 --require("game_spawner")
 require("item_drop")
---require("gamemode")
+require("gamemode")
 require("zpr/req")
 
 function Precache( context )

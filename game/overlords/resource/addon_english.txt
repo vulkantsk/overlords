@@ -5,6 +5,27 @@
 	{		
 		"addon_game_name"			"Overlords"
 
+
+//Pudge
+
+		"DOTA_Tooltip_ability_"					"name"
+		"DOTA_Tooltip_ability__Description"		"desc"
+		"DOTA_Tooltip_ability_"	"" 
+
+		"DOTA_Tooltip_ability_"					"name"
+		"DOTA_Tooltip_ability__Description"		"desc"
+		"DOTA_Tooltip_ability_"	"" 
+
+		"DOTA_Tooltip_ability_"					"name"
+		"DOTA_Tooltip_ability__Description"		"desc"
+		"DOTA_Tooltip_ability_"	"" 
+
+		"DOTA_Tooltip_ability_"					"name"
+		"DOTA_Tooltip_ability__Description"		"desc"
+		"DOTA_Tooltip_ability_"	"" 
+
+		"DOTA_Tooltip_modifier_pudge_flesh_heap_custom"				"Flesh Heap"
+		"DOTA_Tooltip_modifier_pudge_flesh_heap_custom_Description"	"Gives Pudge %MODIFIER_PROPERTY_HEALTH_BONUS%%% health bonus"
 //Abilities
 
 		"DOTA_Tooltip_ability_"					"name"

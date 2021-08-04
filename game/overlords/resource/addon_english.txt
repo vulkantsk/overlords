@@ -59,6 +59,31 @@
 		"DOTA_Tooltip_ability_undying_flesh_golem_custom_hp_per_zombie" "Health Per Zombie: "
 		"DOTA_Tooltip_ability_undying_flesh_golem_custom_dmg_per_zombie" "Damage Per Zombie: "
 		
+//Necrolyte		
+		"DOTA_Tooltip_ability_necrolyte_death_wave" "Death Wave"
+		"DOTA_Tooltip_ability_necrolyte_death_wave_Description"	"Sends a wave that deals damage"	
+		"DOTA_Tooltip_ability_necrolyte_death_wave_damage" "Damage: "
+		"DOTA_Tooltip_ability_necrolyte_death_wave_wave_distance" "Distance: "
+		"DOTA_Tooltip_ability_necrolyte_death_wave_wave_speed" "Speed: "
+		
+		"DOTA_Tooltip_ability_necrolyte_death_pulse_custom" "Death Song"
+		"DOTA_Tooltip_ability_necrolyte_death_pulse_custom_Description"	"Throws skulls in enemies nearby. If enemy dies, skull drops back to hero and restores his health."	
+		"DOTA_Tooltip_ability_necrolyte_death_pulse_custom_pulse_damage" "Damage: "
+		"DOTA_Tooltip_ability_necrolyte_death_pulse_custom_pulse_heal" "Heal: "
+		"DOTA_Tooltip_ability_necrolyte_death_pulse_custom_pulse_speed" "Speed: "
+		"DOTA_Tooltip_ability_necrolyte_death_pulse_custom_duration" "Duration: "
+		"DOTA_Tooltip_ability_necrolyte_death_pulse_custom_radius" "Radius: "
+
+		"DOTA_Tooltip_ability_necrolyte_nether_state" "Nether State"
+		"DOTA_Tooltip_ability_necrolyte_nether_state_Description"	"Send unit to the astral. Unit cant attack or be attacked. Unit receives more magical damage."	
+		"DOTA_Tooltip_ability_necrolyte_nether_state_duration" "Duration: "
+		"DOTA_Tooltip_ability_necrolyte_nether_state_resist_decrease" "Resist Decrease: "
+
+		"DOTA_Tooltip_ability_necrolyte_reaper_scythe_custom" "Reaper Scythe"
+		"DOTA_Tooltip_ability_necrolyte_reaper_scythe_custom_Description"	"Deals %dmg_hp_pct%% of target's current health. If target's health is less than %dmg_hp_pct%% of it's max health, the target dies."	
+		"DOTA_Tooltip_ability_necrolyte_reaper_scythe_custom_damage" "Damage: "
+		"DOTA_Tooltip_ability_necrolyte_reaper_scythe_custom_dmg_hp_pct" "Damage Percent: "
+		
 //Abilities
 
 		"DOTA_Tooltip_ability_"					"name"

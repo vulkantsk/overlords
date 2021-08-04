@@ -1154,6 +1154,11 @@
 				"var_type"				"FIELD_FLOAT"
 				"duration"			"2"
 			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius"			"500"
+			}
 
 		}
 	}

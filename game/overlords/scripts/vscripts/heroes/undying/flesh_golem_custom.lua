@@ -59,13 +59,13 @@ function undying_flesh_golem_custom:OnSpellStart()
 
 --	unit:SetControllableByPlayer(player, false)
 	unit:SetOwner(caster)
-	unit:SetForwardVector(fv)
+	--unit:SetForwardVector(fv)
 	
 	local total_hp = base_hp + hp_per_zombie * unit_count
 	local total_dmg = base_dmg + dmg_per_zombie * unit_count
 
-	unit:SetBaseDamageMin( base_dmg_min )
-	unit:SetBaseDamageMax( base_dmg_max )				
+	unit:SetBaseDamageMin( base_dmg )
+	unit:SetBaseDamageMax( base_dmg )				
 --	unit:SetPhysicalArmorBaseValue( total_count )
 	unit:SetBaseMaxHealth( total_hp )
 	unit:SetMaxHealth( total_hp )

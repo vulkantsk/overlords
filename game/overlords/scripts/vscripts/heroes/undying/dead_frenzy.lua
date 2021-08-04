@@ -16,31 +16,17 @@ function undying_dead_frenzy:OnSpellStart( keys )
     local zombie_duration = ability:GetSpecialValueFor("radius")
 	local target_point = target:GetAbsOrigin()
 	
-	local allies = FindUnitsInRadius(
-		caster:GetTeamNumber(),
-		target_point,
-		nil,
-		radius,
-		DOTA_UNIT_TARGET_TEAM_FRIENDLY,
-		DOTA_UNIT_TARGET_BASIC,
-		0,
-		0,
-		false
-	)
+	local allies = caster:FindAbilityByName("undying_walking_dead").zombies
 	target:AddNewModifier(caster, ability, "modifier_undying_dead_frenzy_debuff", nil)
 
 	for _,ally in pairs(allies) do
-		local owner = ally:GetOwner()
-
-		if caster == owner and (ally.zombie or ally.fleshgolem) then
+		if ally and not ally:IsNull() and ally:IsAlive() then
 			ally:AddNewModifier(caster, ability, "modifier_undying_dead_frenzy", nil)
 			
 			ExecuteOrderFromTable({
 				UnitIndex = ally:entindex(),
 				OrderType = DOTA_UNIT_ORDER_ATTACK_TARGET,
 				TargetIndex = target:entindex(),
-		--		Position = enemy:GetOrigin(),
-		--		Queue = false,
 			})			
 		end
 	end	
@@ -104,24 +90,11 @@ function modifier_undying_dead_frenzy_debuff:OnDestroy()
     local zombie_duration = ability:GetSpecialValueFor("radius")
 	local target_point = target:GetAbsOrigin()
 	
-	local allies = FindUnitsInRadius(
-		caster:GetTeamNumber(),
-		target_point,
-		nil,
-		radius,
-		DOTA_UNIT_TARGET_TEAM_FRIENDLY,
-		DOTA_UNIT_TARGET_BASIC,
-		0,
-		0,
-		false
-	)
+	local allies = caster:FindAbilityByName("undying_walking_dead").zombies
 
 	for _,ally in pairs(allies) do
-		local owner = ally:GetOwner()
-
-		if caster == owner and (ally.zombie or ally.fleshgolem) then
+		if ally and not ally:IsNull() and ally:IsAlive() then
 			ally:RemoveModifierByName("modifier_undying_dead_frenzy")
-			
 		end
 	end
 end

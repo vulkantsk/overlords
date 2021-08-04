@@ -21,10 +21,10 @@ function undying_plague_zombie:OnAbilityPhaseStart()
    if (target.zombie or target.fleshgolem) and caster == owner then
 --		Containers:DisplayError(caster:GetPlayerID(), "undying_plague_zombie_error_need_lvl")
 --		caster:Hold()
-		return false
+		return true
     end
 	
-	return true
+	return false
 end
 
 function undying_plague_zombie:OnSpellStart( keys )
@@ -127,6 +127,10 @@ modifier_undying_plague_zombie_debuff = class({
 	IsDebuff 				= function(self) return false end,
 	IsBuff                  = function(self) return true end,
 	RemoveOnDeath 			= function(self) return true end,
+	DeclareFunctions		= function(self) return 
+	{
+	MODIFIER_EVENT_ON_DEATH,
+	} end,
 })
 
 
@@ -141,7 +145,7 @@ function modifier_undying_plague_zombie_debuff:OnCreated()
 		attacker = caster,
 		victim = target,
 		damage = self.damage*self.interval,
-		damage_type = self:GetAbility():GetAbilityDamageType(),
+		damage_type = DAMAGE_TYPE_MAGICAL,
 		ability = self:GetAbility(),
 	}
 
@@ -151,6 +155,16 @@ end
 
 
 function modifier_undying_plague_zombie_debuff:OnIntervalThink()
-	ApplyDamage(self.damageTable)
+	if self.damageTable.victim:IsAlive() then
+		ApplyDamage(self.damageTable)
+	end
 end
 
+function modifier_undying_plague_zombie_debuff:OnDeath(data)
+    local dead = self:GetParent()
+	local caster = self:GetCaster()
+	local ability = self:GetAbility()
+	local unit = CreateUnitByName( "npc_dota_undying_zombie", dead:GetOrigin(), true, caster, caster, caster:GetTeam() )
+	unit.zombie = true
+	unit:AddNewModifier(caster, ability, "modifier_kill", {duration = ability:GetSpecialValueFor("zombie_duration")})
+end

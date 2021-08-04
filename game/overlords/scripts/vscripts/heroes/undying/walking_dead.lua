@@ -10,8 +10,9 @@ function undying_walking_dead:OnSpellStart()
 	local zombies = self.zombies or {}
 	
 	for key,value in pairs(zombies) do
-		value:ForceKill(false)
---		value = nil
+		if value and not value:IsNull() then
+			value:ForceKill(false)
+		end
 	end
 
 	for i=1, max_count do
@@ -58,21 +59,16 @@ modifier_undying_walking_dead = class({
 })
 
 function modifier_undying_walking_dead:OnDeath(data)
-	if IsServer() then
-		local ability = self:GetAbility()
-		local caster = self:GetCaster()
-		local parent = self:GetParent()
-		local owner = self:GetParent():GetOwner()
-		local killer = data.attacker
-		local killed_unit = data.unit
-		
-		if parent == killed_unit then
-			print("ggg")
-			self:GetAbility().zombies[killed_unit:entindex()] = nil
-		
-			local spawner_modifier = caster:FindModifierByName("modifier_undying_walking_dead_spawner")
-			spawner_modifier:DecrementStackCount()
-		end
+	local ability = self:GetAbility()
+	local caster = self:GetCaster()
+	local parent = self:GetParent()
+	local owner = self:GetParent():GetOwner()
+	local killer = data.attacker
+	local killed_unit = data.unit
+	
+	if parent == killed_unit then
+		local spawner_modifier = owner:FindModifierByName("modifier_undying_walking_dead_spawner")
+		spawner_modifier:DecrementStackCount()
 	end
 end
 

@@ -33,13 +33,6 @@ function modifier_pudge_rot_custom:OnCreated( kv )
 	if not IsServer() then return end
 	self.damage = self.dps * self.interval
 
-	self.damageTable = {
-		attacker = self:GetCaster(),
-		damage = self.damage,
-		damage_type = self:GetAbility():GetAbilityDamageType(),
-		ability = self:GetAbility(),
-	}
-
 	self:StartIntervalThink( self.interval )
 
 	if not self.refresh then		
@@ -84,10 +77,15 @@ function modifier_pudge_rot_custom:OnIntervalThink()
 									DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_HERO, 
 									DOTA_UNIT_TARGET_FLAG_NONE, 
 									FIND_ANY_ORDER, false)
---	print(#enemies)
+	--print(#enemies)
 	for _,enemy in pairs(enemies) do
-		self.damageTable.victim = enemy
-		ApplyDamage( self.damageTable )
+		ApplyDamage({
+			victim = enemy,
+			attacker = self:GetCaster(),
+			damage = self.damage,
+			damage_type = DAMAGE_TYPE_MAGICAL,
+			ability = self:GetAbility(),
+		})
 
 		local effect_cast = ParticleManager:CreateParticle(
 			"particles/units/heroes/hero_doom_bringer/doom_bringer_scorched_earth_debuff.vpcf",

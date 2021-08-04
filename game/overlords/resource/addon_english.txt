@@ -5,27 +5,60 @@
 	{		
 		"addon_game_name"			"Overlords"
 
+	"DOTA_Tooltip_ability_" ""
+	"DOTA_Tooltip_ability__Description"	""	
+	"DOTA_Tooltip_ability_" ""
 
 //Pudge
 
-		"DOTA_Tooltip_ability_"					"name"
-		"DOTA_Tooltip_ability__Description"		"desc"
-		"DOTA_Tooltip_ability_"	"" 
+		"DOTA_Tooltip_ability_pudge_devour"					"Devour"
+		"DOTA_Tooltip_ability_pudge_devour_Description"		"Instantly devours enemy unit, restoring %heal_pct%%  of health"
+		"DOTA_Tooltip_ability_pudge_devour_heal"			"Heal: " 
 
-		"DOTA_Tooltip_ability_"					"name"
-		"DOTA_Tooltip_ability__Description"		"desc"
-		"DOTA_Tooltip_ability_"	"" 
+		"DOTA_Tooltip_ability_pudge_rot_custom"					"Rot"
+		"DOTA_Tooltip_ability_pudge_rot_custom_Description"		"Passive. Deals damage to everyone around."
+		"DOTA_Tooltip_ability_pudge_rot_custom_radius"	"Radius: " 
+		"DOTA_Tooltip_ability_pudge_rot_custom_damage_per_second"	"Damage Per Second: " 
 
-		"DOTA_Tooltip_ability_"					"name"
-		"DOTA_Tooltip_ability__Description"		"desc"
-		"DOTA_Tooltip_ability_"	"" 
+		"DOTA_Tooltip_ability_pudge_flesh_heap_custom"					"Flesh heap"
+		"DOTA_Tooltip_ability_pudge_flesh_heap_custom_Description"		"Nearby killed enemies give Health and Regen bonus forever."
+		"DOTA_Tooltip_ability_pudge_flesh_heap_custom_aura_radius"		"Radius:" 
+		"DOTA_Tooltip_ability_pudge_flesh_heap_custom_stack_hp"			"Health Per Stack: " 
+		"DOTA_Tooltip_ability_pudge_flesh_heap_custom_regen_pct"		"Regen Percent Per Stack" 
 
-		"DOTA_Tooltip_ability_"					"name"
-		"DOTA_Tooltip_ability__Description"		"desc"
-		"DOTA_Tooltip_ability_"	"" 
+		"DOTA_Tooltip_ability_pudge_dismember_custom"					"Dismember"
+		"DOTA_Tooltip_ability_pudge_dismember_custom_Description"		"Stuns target for a few seconds, deals damage at the same time"
+		"DOTA_Tooltip_ability_pudge_dismember_custom_duration"	"Duration: " 
+		"DOTA_Tooltip_ability_pudge_dismember_custom_damage"	"Damage: " 
 
 		"DOTA_Tooltip_modifier_pudge_flesh_heap_custom"				"Flesh Heap"
 		"DOTA_Tooltip_modifier_pudge_flesh_heap_custom_Description"	"Gives Pudge %MODIFIER_PROPERTY_HEALTH_BONUS%%% health bonus"
+//Undying
+		"DOTA_Tooltip_ability_undying_walking_dead" "Walking dead"
+		"DOTA_Tooltip_ability_undying_walking_dead_Description"	"<h2>Passive</h2>Summons zombies if their count is below the limit <br> </br><br></br>  <h2>Active</h2> Summons maximum amount of zombies"	
+		"DOTA_Tooltip_ability_undying_walking_dead_max_count" "Maximum Zombies: "
+		
+		"DOTA_Tooltip_ability_undying_dead_frenzy" "Dead frenzy"
+		"DOTA_Tooltip_ability_undying_dead_frenzy_Description"	"Orders all zombies to attack an enemy. All zombies receive a bonus to attack speed and move speed while the target is still alive."	
+		"DOTA_Tooltip_ability_undying_dead_frenzy_radius" "Radius: "
+		"DOTA_Tooltip_ability_undying_dead_frenzy_duration" "Duration: "
+		
+		"DOTA_Tooltip_ability_undying_plague_zombie" "Plague zombie"
+		"DOTA_Tooltip_ability_undying_plague_zombie_Description"	"Infects selected zombie with plague. Zombie spreads the infection and deals damages. Enemies that die of the infection will become zombies."	
+		"DOTA_Tooltip_ability_undying_plague_zombie_aoe_radius" "Radius: "
+		"DOTA_Tooltip_ability_undying_plague_zombie_zombie_duration" "Zombie Duration: "
+		"DOTA_Tooltip_ability_undying_plague_zombie_debuff_duration" "Debuff Duration: "
+		"DOTA_Tooltip_ability_undying_plague_zombie_damage" "Damage: "
+		
+		"DOTA_Tooltip_ability_undying_flesh_golem_custom" "Fleshgolem"
+		"DOTA_Tooltip_ability_undying_flesh_golem_custom_Description"	"Kills all zombies in radius, creating a flesh golem. Health and regen depends on amount of killed zombies."	
+		"DOTA_Tooltip_ability_undying_flesh_golem_custom_duration" "Duration: "
+		"DOTA_Tooltip_ability_undying_flesh_golem_custom_radius" "Radius: "
+		"DOTA_Tooltip_ability_undying_flesh_golem_custom_base_hp" "Base Health: "
+		"DOTA_Tooltip_ability_undying_flesh_golem_custom_base_dmg" "Base Damage: "
+		"DOTA_Tooltip_ability_undying_flesh_golem_custom_hp_per_zombie" "Health Per Zombie: "
+		"DOTA_Tooltip_ability_undying_flesh_golem_custom_dmg_per_zombie" "Damage Per Zombie: "
+		
 //Abilities
 
 		"DOTA_Tooltip_ability_"					"name"

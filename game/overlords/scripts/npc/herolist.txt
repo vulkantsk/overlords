@@ -1,0 +1,8 @@
+"CustomHeroList"
+{
+	"npc_dota_hero_pudge" "1"
+	"npc_dota_hero_undying" "1"
+	"npc_dota_hero_necrolyte" "1"
+	"npc_dota_hero_life_stealer" "1"
+	"npc_dota_hero_war"			"1"
+}

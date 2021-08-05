@@ -5,11 +5,11 @@ end
 
 ItemDrop.item_drop = {
 --		{items = {"item_branches"}, chance = 5, duration = 5, limit = 3, units = {} },
-		{items = {"item_belt_of_strength","item_boots_of_elves","item_robe"}, chance = 10, limit = 5, units = {"npc_dota_neutral_kobold","npc_dota_neutral_centaur_outrunner"}},--50% drop from list with limit
-		{items = {"item_flask"}, chance = 25, duration = 10},-- global drop 25%
-		{items = {"item_wraith_band"}, units ={"npc_neutral_boss_1"}},
-		{items = {"item_quarterstaff"}, units ={"npc_neutral_boss_2"}},
-		{items = {"item_lifesteal"}, units ={"npc_neutral_boss_3"}},
+--		{items = {"item_belt_of_strength","item_boots_of_elves","item_robe"}, chance = 10, limit = 5, units = {"npc_dota_neutral_kobold","npc_dota_neutral_centaur_outrunner"}},--50% drop from list with limit
+--		{items = {"item_flask"}, chance = 25, duration = 10},-- global drop 25%
+--		{items = {"item_wraith_band"}, units ={"npc_neutral_boss_1"}},
+--		{items = {"item_quarterstaff"}, units ={"npc_neutral_boss_2"}},
+--		{items = {"item_lifesteal"}, units ={"npc_neutral_boss_3"}},
 }
 
 ItemDrop.secret_items = {

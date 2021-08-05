@@ -8,7 +8,7 @@ PLAYER_COUNT_CUSTOM_2 = 0
 
 ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned
 HERO_RESPAWN_TIME = 15					--
-STARTING_GOLD = 500						-- What starting gold player have ?
+STARTING_GOLD = 0						-- What starting gold player have ?
 HERO_START_LEVEL = 1
 
 ALLOW_SAME_HERO_SELECTION = false        -- Should we let people select the same hero as each other
@@ -58,12 +58,12 @@ USE_CUSTOM_XP_VALUES = true             -- Should we use custom XP values to lev
 
 -- Fill this table up with the required XP per level if you want to change it
 XP_PER_LEVEL_TABLE = {}
-XP_PER_LEVEL_TABLE[0] = 0
+XP_PER_LEVEL_TABLE[0] = 100
 for i=1,14 do
   XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+i * 50
 end
 
-for i=15,29 do
+for i=15,24 do
   XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1]+i * 100
 end
 

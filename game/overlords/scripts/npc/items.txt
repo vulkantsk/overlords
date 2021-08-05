@@ -1,0 +1,546 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+
+	//=================================================================================================================
+	// Observer Wards
+	//=================================================================================================================
+
+	//=================================================================================================================
+	// Smoke of Deceit
+	//=================================================================================================================
+	"item_smoke_of_deceit"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"188"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"Model"							"models/props_gameplay/smoke.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_smoke.vpcf"		
+		"FightRecapLevel"				"1"
+																																																																												 
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.0"
+		"AbilityCastRange"				"1200"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"0"
+		"ItemCost"						"50"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"smoke of deceit"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"2"
+		"ItemStockTime"					"420.0"			  
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"
+		"ItemAlertable"					"1"
+		"IsTempestDoubleClonable"		"0"
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"application_radius"	"1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"visibility_radius"		"1025"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"		"15"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"35.0"
+			}
+		}
+	}
+	"item_tpscroll"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"46"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOASSIST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"Model"							"models/props_gameplay/tpscroll01.vmdl"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCooldown"				"80.0"
+		"AbilitySharedCooldown"			"teleport"
+		"AbilityChannelTime"			"3.0"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"0"
+		"AbilityManaCost"				"75"
+		"ItemCost"						"100"
+		"ItemShopTags"					"consumable;tutorial"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tp;town portal scroll;teleport"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		//"SideShop"						"1"
+		"ItemPurchasable"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"minimun_distance"		"70"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maximum_distance"		"800"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"200"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tooltip_channel_time"			"3.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Dust
+	//=================================================================================================================
+	"item_dust"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"40"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/dust.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_dust.vpcf"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30.0"
+		"AbilityCastRange"				"1050"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"0"
+		"AbilityManaCost"				"0"
+		"ItemCost"						"80"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"dust of appearance"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"		  
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemSupport"					"1"
+		"IsTempestDoubleClonable"		"0"
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"12"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"1050"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movespeed"				"-20"
+			}
+		}
+	}
+	"item_ward_observer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"42"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"Model"							"models/props_gameplay/observer_ward_bundle.vmdl"
+		
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"1.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"0"
+		"ItemCost"						"0"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"observer ward"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemStockMax"					"4"
+		"ItemStockInitial"				"2"
+		"ItemStockTime"					"135.0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemSupport"					"1"
+		"IsTempestDoubleClonable"		"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime"				"360"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_range_tooltip"	"1600"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health"				"200"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration_minutes_tooltip"				"6"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Sentry Ward
+	//=================================================================================================================
+	"item_ward_sentry"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"43"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"Model"							"models/props_gameplay/sentry_ward_bundle.vmdl"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"1.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"0"
+		"ItemCost"						"50"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"sentry ward"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemStockMax"					"10"
+		"ItemStockInitial"				"3"
+		"ItemStockTime"					"75"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemSupport"					"1"
+		"IsTempestDoubleClonable"		"0"
+		"ShouldBeInitiallySuggested"	"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime"				"480"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_range"			"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"true_sight_range"		"900"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health"				"200"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration_minutes_tooltip"				"8"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Recipe: Ward Dispenser
+	//=================================================================================================================
+	"item_recipe_ward_dispenser"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"217"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"0"
+		"ItemRecipe"					"1"
+		"ItemPurchasable"				"0"
+		"ItemResult"					"item_ward_dispenser"
+		"ItemRequirements"
+		{
+			"01"						"item_ward_sentry;item_ward_observer"
+			"02"						"item_ward_sentry;item_ward_dispenser"
+			"03"						"item_ward_dispenser*;item_ward_observer"
+			"04"						"item_ward_dispenser*;item_ward_dispenser"
+		}
+	}
+	
+	//=================================================================================================================
+	// Ward Dispenser
+	//=================================================================================================================
+	"item_ward_dispenser"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"218"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"50"
+		"ItemQuality"					"common"
+		"ItemAliases"					"ward"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPurchasable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"IsTempestDoubleClonable"		"0"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCooldown"				"0"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"100"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"observer_cost"			"75"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sentry_cost"			"100"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime_observer"				"360"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime_sentry"				"480"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"creation_delay"		"0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"observer_vision_range_tooltip"		"1600"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"observer_duration_minutes_tooltip"		"6"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"true_sight_range"		"900"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sentry_duration_minutes_tooltip"		"8"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Tango
+	//=================================================================================================================
+	"item_tango"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"44"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+		"Model"							"models/props_gameplay/tango.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_tango.vpcf"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"165"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"0"
+		"ItemCost"						"90"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tango"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"3"
+		"IsTempestDoubleClonable"		"0"
+		"ShouldBeInitiallySuggested"	"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen"			"7.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"buff_duration"			"16.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_charges"				"3"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Tango Single Instance
+	//=================================================================================================================
+	"item_tango_single"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"241"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"Model"							"models/props_gameplay/tango.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_tango.vpcf"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"165"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"30"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"0"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemPurchasable"				"0"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"IsTempestDoubleClonable"		"0"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen"			"7.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"buff_duration"			"16.0"
+			}
+
+		}
+	}
+
+}
+		
+		

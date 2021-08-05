@@ -1687,108 +1687,6 @@
 }
 
 
-	//Ополченец
-   
-   "npc_dota_tribe_warrior"
-	{										
-		// General
-		//----------------------------------------------------------------
-		"Model"		"models/heroes/dragon_knight_persona/dk_persona_base.vmdl"
-		"SoundSet"		"Hero_DragonKnight"
-		"BaseClass"					"npc_dota_creature"
-		"Level"						"4"
-		"ModelScale" 					"1.1"
- 		"UseNeutralCreepBehavior"	"1"
-
-		// Abilities
-		//----------------------------------------------------------------
-		"Ability1"					""			// Ability 1
-		"Ability2"					""			// Ability 2
-		"Ability3"					""			// Ability 3
-		"Ability4"					""			// Ability 4
-
-		// Armor
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"10"			// Physical protection.
-		"MagicalResistance"				"38"		// Magical protection.
-
-		// Attack
-		//----------------------------------------------------------------
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"160"		// Damage range min.
-		"AttackDamageMax"			"180"		// Damage range max.	
-		"AttackRate"				"1.5"		// Speed of attack.
-		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
-		"AttackRange"				"125"		// Range within a target can be attacked.
-		"ProjectileModel"			""			// Particle system model for projectile.
-		"ProjectileSpeed"			"0"			// Speed of projectile.		   
-
-		// Bounds
-		//----------------------------------------------------------------
-		"RingRadius"				"70"
-		"HealthBarOffset"			"200"
-		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
-
-		// Bounty
-		//----------------------------------------------------------------
-		"BountyXP"					"319"		// Experience earn.
-		"BountyGoldMin"				"70"		// Gold earned min.
-		"BountyGoldMax"				"110"		// Gold earned max.
-
-		// Movement
-		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"325"		// Speed.
-
-		// Status
-		//----------------------------------------------------------------
-		"StatusHealth"				"1500"		// Base health.
-		"StatusHealthRegen"			"5"		// Health regeneration rate.
-		"StatusMana"				"100"			// Base mana.
-		"StatusManaRegen"			"0"			// Mana regeneration rate.		 
-		
-		// Vision
-		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
-
-		// Team
-		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
-		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
-		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-	
-
- "Creature"
-{
-		"AttachWearables"
-            {
-                "Wearable1"
-                {
-                    "ItemDef"            "19008"
-                }
-                 "Wearable2"
-                {
-                    "ItemDef"            "765"
-                }
-                 "Wearable3"
-                {
-                    "ItemDef"            "732"
-                }
-                "Wearable4"
-                {
-                    "ItemDef"            "762"
-                }
-           
-	      
-
-
-	      }
-	}
-}
-
 "npc_dota_tribe_archer"
 	{										
 		// General
@@ -3704,6 +3602,104 @@
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	
 
+}
+
+	//Ополченец
+   
+   "npc_dota_neutral_knight"
+	{										
+		"vscripts"			"ai/ai_neutral_autocast"
+		// General
+		//----------------------------------------------------------------
+		"Model"		"models/heroes/dragon_knight_persona/dk_persona_base.vmdl"
+		"SoundSet"		"Hero_DragonKnight"
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"1"
+		"ModelScale" 					"1"
+ 		"UseNeutralCreepBehavior"	"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"dragon_knight_dragon_tail"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"			// Physical protection.
+		"MagicalResistance"				"38"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"160"		// Damage range min.
+		"AttackDamageMax"			"180"		// Damage range max.	
+		"AttackRate"				"1.5"		// Speed of attack.
+		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
+		"AttackRange"				"125"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"200"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"319"		// Experience earn.
+		"BountyGoldMin"				"70"		// Gold earned min.
+		"BountyGoldMax"				"110"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"325"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1500"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"100"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+
+ "Creature"
+{
+		"AttachWearables"
+            {
+                "Wearable1"
+                {
+                    "ItemDef"            "19008"
+                }
+                 "Wearable2"
+                {
+                    "ItemDef"            "765"
+                }
+                 "Wearable3"
+                {
+                    "ItemDef"            "732"
+                }
+                "Wearable4"
+                {
+                    "ItemDef"            "762"
+	      }
+	}
 }
 
 }

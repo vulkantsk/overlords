@@ -84,6 +84,31 @@
 		"DOTA_Tooltip_ability_necrolyte_reaper_scythe_custom_damage" "Damage: "
 		"DOTA_Tooltip_ability_necrolyte_reaper_scythe_custom_dmg_hp_pct" "Damage Percent: "
 		
+//Lifestealer
+		
+		"DOTA_Tooltip_ability_life_stealer_injury" "Injury"
+		"DOTA_Tooltip_ability_life_stealer_injury_Description"	"Deals physical damage(basic + critical), decreasing target's attack speed and armor."	
+		"DOTA_Tooltip_ability_life_stealer_injury_crit_multiplier" "Crit Multiplier: "
+		"DOTA_Tooltip_ability_life_stealer_injury_debuff_duration" "Debuff Duration: "
+		"DOTA_Tooltip_ability_life_stealer_injury_armor_decrease" "Armor Decrease: "
+		"DOTA_Tooltip_ability_life_stealer_injury_as_decrease" "Attack Speed Decrease: "
+		
+		"DOTA_Tooltip_ability_life_stealer_feast_custom" "Feast"
+		"DOTA_Tooltip_ability_life_stealer_feast_custom_Description" "Restores %lifesteal_pct%%  of dealt damage as health"	
+		"DOTA_Tooltip_ability_life_stealer_feast_custom_lifesteal_pct" "Lifesteal Percent: "
+		
+		"DOTA_Tooltip_ability_life_stealer_claws" "Claws"
+		"DOTA_Tooltip_ability_life_stealer_claws_Description"	"Every %attack_required% attack deals additional damages and disarms target."	
+		"DOTA_Tooltip_ability_life_stealer_claws_attack_required" "Attacks Required: "	
+		"DOTA_Tooltip_ability_life_stealer_claws_bonus_dmg" "Bonus Damage: "	
+		"DOTA_Tooltip_ability_life_stealer_claws_disarm_duration" "Disarm Duration: "			
+		
+		"DOTA_Tooltip_ability_life_stealer_rage_custom" "Rage"
+		"DOTA_Tooltip_ability_life_stealer_rage_custom_Description"	"Launch into a maddened rage, becoming Spell Immune, and gaining increased attack speed and movespeed"	
+		"DOTA_Tooltip_ability_life_stealer_rage_custom_buff_duration" "Duration: "
+		"DOTA_Tooltip_ability_life_stealer_rage_custom_as_bonus" "Bonus Attack Speed: "
+		"DOTA_Tooltip_ability_life_stealer_rage_custom_ms_bonus" "Bonus Movespeed: "
+		
 //Abilities
 
 		"DOTA_Tooltip_ability_"					"name"
@@ -173,5 +198,26 @@
 		"npc_neutral_kobold_2"			"Kobold spearman"
 		"npc_neutral_kobold_3"			"Kobold taskmaster"
 
+//Items
+		"DOTA_Tooltip_ability_item_"				""
+		"DOTA_Tooltip_ability_item__Description"	""
+		"DOTA_Tooltip_ability_item__"				""
+
+		"DOTA_Tooltip_ability_item_daedalus_custom"				"Daedalus"
+		"DOTA_Tooltip_ability_item_daedalus_custom_Description"	"<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%%% chance to deal %crit_multiplier%%% damage."
+		"DOTA_Tooltip_ability_item_daedalus_custom_bonus_dmg"				"Bonus Damage: "
+		"DOTA_Tooltip_ability_item_daedalus_custom_bonus_as"				"Bonus Attack Speed: "
+
+		"DOTA_Tooltip_ability_item_blademail_custom"				"Blademail"
+		"DOTA_Tooltip_ability_item_blademail_custom_Description"	"<h1>Passive: Damage Return</h1>Duplicates any damage taken back to the unit that dealt the damage."
+		"DOTA_Tooltip_ability_item_blademail_custom_bonus_hp"				"Bonus Health: "
+		"DOTA_Tooltip_ability_item_blademail_custom_bonus_armor"				"Bonus Armor: "
+		"DOTA_Tooltip_ability_item_blademail_custom_dmg_return_pct"				"Damage Return Percent: "
+		
+		"DOTA_Tooltip_ability_item_heart_custom"				"Heart of Tarrasque"
+		"DOTA_Tooltip_ability_item_heart_custom_Description"	"<h1>Passive: Health Regeneration</h1>Restores %bonus_hpreg_pct%%% of max health per second."
+		"DOTA_Tooltip_ability_item_heart_custom_bonus_hp"				"Bonus Health:"
+		"DOTA_Tooltip_ability_item_heart_custom_bonus_hpreg"				"Bonus Health Regen: "
+		"DOTA_Tooltip_ability_item_heart_custom_bonus_hpreg_pct"				"Bonus Health Regen: Percent"
 	}
 }

@@ -1,4 +1,11 @@
 // Units File
+
+#base "units/npc_forest.txt"
+#base "units/npc_library.txt"
+#base "units/npc_bank.txt"
+#base "units/npc_passage.txt"
+#base "units/npc_castle1.txt"
+
 "DOTAUnits"
 {
 	"Version"	"1"

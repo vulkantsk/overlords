@@ -1,4 +1,186 @@
 "DOTAUnits"
 {
+	"npc_bank_boss"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"		"models/heroes/alchemist/alchemist.vmdl"
+		"SoundSet"		"Hero_Alchemist"
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"13"
+		"IsAncient"					"1"
+		"ModelScale" 					"1.0"
+		"IsNeutralUnitType"			"1"
 
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"alchemist_acid_spray"
+		"Ability2"		"alchemist_unstable_concoction"
+		"Ability3"		"alchemist_goblins_greed"
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"		"3.0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"33"
+		"AttackDamageMax"		"43"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.350000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150" 
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"300"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"225"		// Experience earn.
+		"BountyGoldMin"				"150"		// Gold earned min.
+		"BountyGoldMax"				"150"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"4"			// Health regeneration rate.
+		"StatusMana"				"500"			// Base mana.
+		"StatusManaRegen"			"1"			// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "18083" }
+				"Wearable2" { "ItemDef" "18082" }
+				"Wearable3" { "ItemDef" "18081" }
+				"Wearable4" { "ItemDef" "18080" }
+				"Wearable5" { "ItemDef" "18079" }
+				"Wearable6" { "ItemDef" "18078" }
+				"Wearable7" { "ItemDef" "18077" }
+			}
+		
+			//Level Up Parameters
+			//------------------------------------------------------------
+			"HPGain"					"25"
+			"DamageGain"				"2"
+			"ArmorGain"					"1"
+			"MagicResistGain"			"1"
+			"MoveSpeedGain"				"1"
+		}
+	}	
+	
+	"npc_bank_guard"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"		"models/heroes/antimage/antimage.vmdl"
+		"SoundSet"		"Hero_Antimage"
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"6"
+		"ModelScale" 					"0.6"
+		"IsNeutralUnitType"			"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"antimage_mana_break"
+		"Ability2"		"antimage_blink"
+		"Ability3"		"antimage_counterspell"
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"2"			// Physical protection.
+		"MagicalResistance"				"100"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"15"
+		"AttackDamageMax"		"25"
+		"AttackRate"		"1.400000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"ProjectileSpeed"		"0"  
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"220"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"100"		// Experience earn.
+		"BountyGoldMin"				"25"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"320"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"800"		// Base health.
+		"StatusHealthRegen"			"1"			// Health regeneration rate.
+		"StatusMana"				"0"		// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "8734" }
+				"Wearable2" { "ItemDef" "8735" }
+				"Wearable3" { "ItemDef" "8733" }
+				"Wearable4" { "ItemDef" "8732" }
+				"Wearable5" { "ItemDef" "8731" }
+				"Wearable6" { "ItemDef" "8730" }
+				"Wearable7" { "ItemDef" "8729" }
+			}
+		
+			//Level Up Parameters
+			//------------------------------------------------------------
+			"DamageGain"				"1"
+			"MoveSpeedGain"				"20"
+		}
+	}
 }

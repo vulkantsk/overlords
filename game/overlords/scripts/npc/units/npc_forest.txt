@@ -5,7 +5,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_c.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					".9"
@@ -75,7 +75,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_b/n_creep_kobold_b.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 					".9"
@@ -145,7 +145,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"2"
 		"ModelScale" 					"1"
@@ -215,7 +215,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_centaur_med/n_creep_centaur_med.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"2"
 		"ModelScale" 					".80"
@@ -285,7 +285,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_centaur_lrg/n_creep_centaur_lrg.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"5"
 		"ModelScale" 					"1"
@@ -355,7 +355,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"5"
 		"IsAncient"					"1"
@@ -427,7 +427,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"6"
 		"IsAncient"					"1"
@@ -499,7 +499,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_black_drake/n_creep_black_drake.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"3"
 		"IsAncient"					"1"
@@ -570,7 +570,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_black_dragon/n_creep_black_dragon.vmdl"	// Model.
-		"BaseClass"					"npc_dota_creep_neutral"
+		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"Level"						"6"
 		"IsAncient"					"1"

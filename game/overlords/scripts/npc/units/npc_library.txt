@@ -1,4 +1,186 @@
 "DOTAUnits"
 {
+	"npc_library_boss"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"		"models/heroes/keeper_of_the_light/keeper_of_the_light.vmdl"
+		"SoundSet"		"Hero_KeeperOfTheLight"
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"10"
+		"IsAncient"					"1"
+		"ModelScale" 					"0.9"
+		"IsNeutralUnitType"			"1"
 
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"keeper_of_the_light_illuminate"			// Ability 1
+		"Ability2"					"keeper_of_the_light_blinding_light"			// Ability 2
+		"Ability3"					"keeper_of_the_light_chakra_magic"			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"		"10.000000"
+		"MagicalResistance"				"70"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"30"
+		"AttackDamageMax"		"40"
+		"AttackRate"		"1.500000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackAcquisitionRange"		"800"
+		"AttackRange"		"600"
+		"ProjectileModel"		"particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_base_attack.vpcf"
+		"ProjectileSpeed"		"900"    
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"300"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"400"		// Experience earn.
+		"BountyGoldMin"				"75"		// Gold earned min.
+		"BountyGoldMax"				"75"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1750"		// Base health.
+		"StatusHealthRegen"			"2"			// Health regeneration rate.
+		"StatusMana"				"500"			// Base mana.
+		"StatusManaRegen"			"1"			// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "5320" }
+				"Wearable2" { "ItemDef" "5316" }
+				"Wearable3" { "ItemDef" "5318" }
+				"Wearable4" { "ItemDef" "9122" }
+			}
+		
+			//Level Up Parameters
+			//------------------------------------------------------------
+			"HPGain"					"100"
+			"DamageGain"				"5"
+			"ArmorGain"					"1"
+			"MagicResistGain"			"1"
+			"MoveSpeedGain"				"1"
+		}
+	}		
+	
+	"npc_library_guard"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"		"models/heroes/dragon_knight/dragon_knight.vmdl"
+		"SoundSet"		"Hero_DragonKnight"
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"4"
+		"ModelScale" 					"0.64"
+		"IsNeutralUnitType"			"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"dragon_knight_breathe_fire"
+		"Ability2"		"dragon_knight_dragon_tail"
+		"Ability3"		"dragon_knight_dragon_blood"
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"20"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"21"
+		"AttackDamageMax"		"27"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.500000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"220"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"100"		// Experience earn.
+		"BountyGoldMin"				"25"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"320"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"600"		// Base health.
+		"StatusHealthRegen"			"1"			// Health regeneration rate.
+		"StatusMana"				"200"		// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "4610" }
+				"Wearable2" { "ItemDef" "4513" }
+				"Wearable3" { "ItemDef" "4564" }
+				"Wearable4" { "ItemDef" "4519" }
+				"Wearable5" { "ItemDef" "4612" }
+				"Wearable6" { "ItemDef" "4516" }
+			}
+		
+			//Level Up Parameters
+			//------------------------------------------------------------
+			"HPGain"					"10"
+			"DamageGain"				"5"
+			"ArmorGain"					"3"
+			"MagicResistGain"			"1"
+			"MoveSpeedGain"				"1"
+		}
+	}
 }

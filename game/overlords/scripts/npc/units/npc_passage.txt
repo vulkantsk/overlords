@@ -1,4 +1,186 @@
 "DOTAUnits"
 {
+	"npc_passage_boss"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"		"models/heroes/sven/sven.vmdl"
+		"SoundSet"		"Hero_Sven"
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"33"
+		"ModelScale" 					"1"
+		"IsNeutralUnitType"			"1"
 
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"sven_storm_bolt"
+		"Ability2"		"sven_great_cleave"
+		"Ability3"		"sven_warcry"
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"50"
+		"AttackDamageMax"		"60"
+		"AttackRate"		"1.600000"
+		"AttackAnimationPoint"		"0.400000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150" 
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"220"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"350"		// Experience earn.
+		"BountyGoldMin"				"100"		// Gold earned min.
+		"BountyGoldMax"				"100"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"320"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3333"		// Base health.
+		"StatusHealthRegen"			"3.3"			// Health regeneration rate.
+		"StatusMana"				"100"		// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "9655" }
+				"Wearable2" { "ItemDef" "8727" }
+				"Wearable3" { "ItemDef" "8728" }
+				"Wearable4" { "ItemDef" "9598" }
+				"Wearable5" { "ItemDef" "9600" }
+				"Wearable6" { "ItemDef" "9599" }
+			}
+		
+			//Level Up Parameters
+			//------------------------------------------------------------
+			"ArmorGain"					"1"
+			"MagicResistGain"			"1"
+			"MoveSpeedGain"				"1"
+		}
+	}
+	
+	"npc_passage_sniper"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"		"models/heroes/sniper/sniper.vmdl"
+		"SoundSet"		"Hero_Sniper"
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"2"
+		"ModelScale" 					"1"
+		"IsNeutralUnitType"			"1"
+		"UseNeutralCreepBehavior"	"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"		"sniper_shrapnel"
+		"Ability2"		"sniper_headshot"
+		"Ability3"		"sniper_take_aim"
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"1"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"15"
+		"AttackDamageMax"		"21"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.170000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"266"
+			"faster"	"376"
+			"fastest"	"487"
+		}
+		"AttackAcquisitionRange"		"1500"
+		"AttackRange"		"1000"
+		"ProjectileModel"		"particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
+		"ProjectileSpeed"		"3000"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"80"
+		"HealthBarOffset"			"220"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"100"		// Experience earn.
+		"BountyGoldMin"				"25"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"320"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"500"		// Base health.
+		"StatusHealthRegen"			"2"			// Health regeneration rate.
+		"StatusMana"				"100"		// Base mana.
+		"StatusManaRegen"			"1.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "9654" }
+				"Wearable2" { "ItemDef" "9653" }
+				"Wearable3" { "ItemDef" "9652" }
+				"Wearable4" { "ItemDef" "9651" }
+				"Wearable5" { "ItemDef" "9650" }
+			}
+		
+			//Level Up Parameters
+			//------------------------------------------------------------
+			"MoveSpeedGain"				"5"
+		}
+	}
 }

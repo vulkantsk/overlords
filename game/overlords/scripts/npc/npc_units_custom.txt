@@ -5,6 +5,8 @@
 #base "units/npc_bank.txt"
 #base "units/npc_passage.txt"
 #base "units/npc_castle1.txt"
+#base "units/npc_castle2.txt"
+#base "units/npc_castle3.txt"
 
 "DOTAUnits"
 {
